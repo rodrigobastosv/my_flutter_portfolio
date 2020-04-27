@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
+import 'package:my_flutter_portfolio/widget/loading.dart';
 
 class AboutMePage extends StatefulWidget {
   @override
@@ -27,9 +28,7 @@ class _AboutMePageState extends State<AboutMePage> {
   Widget build(BuildContext context) {
     return Container(
       child: isLoading
-          ? Center(
-              child: CircularProgressIndicator(),
-            )
+          ? Loading()
           : Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[

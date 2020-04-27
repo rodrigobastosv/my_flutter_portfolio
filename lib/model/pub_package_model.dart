@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class PubPackage {
+class PubPackageModel {
   final String name;
   final String description;
   final String pubLink;
@@ -8,7 +8,7 @@ class PubPackage {
   final int score;
   final Timestamp releaseDate;
 
-  PubPackage({
+  PubPackageModel({
     this.name,
     this.description,
     this.pubLink,
@@ -17,8 +17,8 @@ class PubPackage {
     this.releaseDate,
   });
 
-  static PubPackage fromJson(Map<String, dynamic> json) {
-    return PubPackage(
+  static PubPackageModel fromJson(Map<String, dynamic> json) {
+    return PubPackageModel(
       name: json['name'] as String,
       description: json['description'] as String,
       pubLink: json['pubLink'] as String,

@@ -1,29 +1,30 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:my_flutter_portfolio/model/pub_package_model.dart';
+import 'package:my_flutter_portfolio/model/medium_post_model.dart';
 import 'package:my_flutter_portfolio/widget/loading.dart';
 
-import 'widget/pub_packages_list.dart';
+import 'widge/medium_posts_list.dart';
 
-class PubPackagesPage extends StatefulWidget {
+class MediumPostsPage extends StatefulWidget {
   @override
-  _PubPackagesPageState createState() => _PubPackagesPageState();
+  _MediumPostsPageState createState() => _MediumPostsPageState();
 }
 
-class _PubPackagesPageState extends State<PubPackagesPage> {
+class _MediumPostsPageState extends State<MediumPostsPage> {
   bool isLoading = true;
-  List<PubPackageModel> myPackages;
+  List<MediumPostModel> posts = [];
 
   @override
   void initState() {
     Firestore.instance
-        .collection('pub_dev')
+        .collection('medium_posts')
         .getDocuments()
         .then((querySnapshot) {
       final documentSnapshots = querySnapshot.documents;
+
       setState(() {
-        myPackages = List.generate(documentSnapshots.length,
-            (i) => PubPackageModel.fromJson(documentSnapshots[i].data));
+        posts = List.generate(documentSnapshots.length,
+            (i) => MediumPostModel.fromJson(documentSnapshots[i].data));
         isLoading = false;
       });
     });
@@ -34,17 +35,17 @@ class _PubPackagesPageState extends State<PubPackagesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         title: Text(
-          'My Pub.dev Packages',
+          'My Medium Posts',
           style: TextStyle(
             color: Colors.black,
           ),
         ),
-        elevation: 0,
         centerTitle: true,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+        elevation: 0,
       ),
-      body: isLoading ? Loading() : PubPackagesList(myPackages),
+      body: isLoading ? Loading() : MediumPostsList(posts),
     );
   }
 }

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:my_flutter_portfolio/model/pub_package.dart';
+import 'package:my_flutter_portfolio/model/pub_package_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PubPackagesList extends StatelessWidget {
   PubPackagesList(this.packages);
 
-  final List<PubPackage> packages;
+  final List<PubPackageModel> packages;
 
   @override
   Widget build(BuildContext context) {

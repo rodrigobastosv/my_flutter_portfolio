@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_flutter_portfolio/model/app_model.dart';
+import 'package:my_flutter_portfolio/widget/loading.dart';
 
 import 'widget/apps_list.dart';
 
@@ -50,11 +51,7 @@ class _AppsPageState extends State<AppsPage> {
         elevation: 0,
         centerTitle: true,
       ),
-      body: isLoading
-          ? Center(
-              child: CircularProgressIndicator(),
-            )
-          : AppsList(apps),
+      body: isLoading ? Loading() : AppsList(apps),
     );
   }
 }

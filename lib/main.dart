@@ -4,6 +4,7 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:my_flutter_portfolio/pages/about_me/about_me_page.dart';
 
 import 'pages/apps/apps_page.dart';
+import 'pages/medium_posts/medium_posts_page.dart';
 import 'pages/pub_packages/pub_packages_page.dart';
 
 void main() => runApp(MyApp());
@@ -71,11 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
             AboutMePage(),
             AppsPage(),
             PubPackagesPage(),
-            Container(
-              child: Center(
-                child: Text('Page 4'),
-              ),
-            ),
+            MediumPostsPage(),
           ],
         ),
       ),

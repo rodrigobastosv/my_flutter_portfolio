@@ -4,7 +4,7 @@ description: A new Flutter project.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.3.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -16,11 +16,15 @@ dependencies:
   curved_navigation_bar: ^0.3.2
   flutter_icons: ^1.1.0
   fancy_shimmer_image: ^1.0.1
-  flutter_tindercard: ^0.1.8
+  carousel_slider: ^2.0.0
+  json_serializable: ^3.3.0
+  badges: ^1.1.1
+  url_launcher: ^5.4.5
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  build_runner:
 
 flutter:
 

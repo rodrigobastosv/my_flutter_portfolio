@@ -1,0 +1,30 @@
+name: my_flutter_portfolio
+description: A new Flutter project.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cloud_firestore: ^0.13.5
+  firebase_storage: ^3.1.5
+  cupertino_icons: ^0.1.2
+  curved_navigation_bar: ^0.3.2
+  flutter_icons: ^1.1.0
+  fancy_shimmer_image: ^1.0.1
+  flutter_tindercard: ^0.1.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/images/

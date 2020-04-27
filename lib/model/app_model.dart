@@ -5,6 +5,7 @@ class AppModel {
   final String id;
   final String name;
   final String mainColor;
+  final String titleColor;
   final String logo;
   final String description;
   final String googlePlayLink;
@@ -16,6 +17,7 @@ class AppModel {
       {this.id,
       this.name,
       this.mainColor,
+      this.titleColor,
       this.logo,
       this.googlePlayLink,
       this.description,
@@ -51,6 +53,7 @@ class AppModel {
       logo: json['logo'] as String,
       description: json['description'] as String,
       mainColor: json['mainColor'] as String,
+      titleColor: json['titleColor'] as String,
       googlePlayLink: json['googlePlayLink'] as String,
       releaseDate:
           AppModel._fromJsonTimestamp(json['releaseDate'] as Timestamp),

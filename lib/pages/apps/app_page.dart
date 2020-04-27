@@ -29,7 +29,7 @@ class _AppPageState extends State<AppPage> {
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 28,
-            color: Colors.black,
+            color: Color(int.parse(widget.app.titleColor)),
           ),
         ),
         centerTitle: true,
@@ -122,7 +122,8 @@ class _AppPageState extends State<AppPage> {
                 padding: EdgeInsets.all(0),
                 label: Text(
                   stuff.name,
-                  style: TextStyle(color: Colors.white),
+                  style:
+                      TextStyle(color: Color(int.parse(widget.app.titleColor))),
                 ),
               ),
             ),

@@ -46,15 +46,14 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
+        buttonBackgroundColor: Colors.black,
+        color: Colors.black,
         items: <Widget>[
-          CircleAvatar(
-            backgroundImage: AssetImage('assets/images/profile.jpeg'),
-            radius: 16,
-          ),
-          Icon(FontAwesome5Brands.google_play, size: 30),
-          Icon(FontAwesome5Brands.git, size: 30),
-          Icon(FontAwesome5Brands.medium, size: 30),
+          Icon(FontAwesome.user, size: 30, color: Colors.white),
+          Icon(FontAwesome5Brands.google_play, size: 30, color: Colors.white),
+          Icon(FontAwesome5Brands.git, size: 30, color: Colors.white),
+          Icon(FontAwesome5Brands.medium, size: 30, color: Colors.white),
         ],
         onTap: (index) {
           _pageController.animateToPage(

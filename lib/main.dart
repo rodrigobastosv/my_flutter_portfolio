@@ -50,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
         buttonBackgroundColor: Colors.black,
         color: Colors.black,
         items: <Widget>[
-          Icon(FontAwesome.user, size: 30, color: Colors.white),
+          Icon(FontAwesome.user_o, size: 30, color: Colors.white),
           Icon(FontAwesome5Brands.google_play, size: 30, color: Colors.white),
           Icon(FontAwesome5Brands.git, size: 30, color: Colors.white),
           Icon(FontAwesome5Brands.medium, size: 30, color: Colors.white),

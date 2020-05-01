@@ -25,6 +25,7 @@ dependencies:
   animated_card: ^1.0.0+8
   country_icons: ^1.1.1
   expansion_tile_card: ^1.0.3
+  google_fonts: ^1.0.0
 
 dev_dependencies:
   flutter_test:

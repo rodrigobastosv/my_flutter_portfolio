@@ -1,6 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:my_flutter_portfolio/pages/about_me/about_me_page.dart';
 
 import 'pages/apps/apps_page.dart';
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        textTheme: GoogleFonts.playfairDisplayTextTheme(),
       ),
       home: MyHomePage(),
     );

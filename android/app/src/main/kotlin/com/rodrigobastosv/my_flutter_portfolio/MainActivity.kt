@@ -1,4 +1,4 @@
-package com.example.my_flutter_portfolio
+package com.rodrigobastosv.my_flutter_portfolio
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
